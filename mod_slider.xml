@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2014 slider. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+-->
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>Slider</name>
+	<author>Russell English</author>
+	<creationDate>December 2014</creationDate>
+	<copyright>Copyright (c) 2014 slider. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0.0</version>
+	<description>
+	<![CDATA[
+	
+	]]>
+	</description>
+
+	<files>
+		<filename module="mod_slider">mod_slider.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<languages>
+		<language tag="en-GB">en-GB.mod_slider.ini</language>
+		<language tag="en-GB">en-GB.mod_slider.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+	
+				<field name="show_indicators" type="checkbox" label="Show Indicators?" description="Show the slide indicators at the bottom of the slide" value="1" default="0" />
+				<field name="show_chevrons" type="checkbox" label="Show Chevrons?" description="Show the chevrons to the left and right of the slide" value="1" default="0" />
+				
+			</fieldset>
+			<fieldset name="MOD_SLIDER_SLIDE_1">
+				<field name="title1" filter="raw" type="text" default="Title" label="Enter the title" description="" size="10" />
+				<field name="introcopy1" label ="Introduction" type="editor" width="150" filter="safehtml" />
+				<field name="image1" type="media" directory="stories" label="Image" description="Please select the image to show in the box" />	
+				<field name="link_menu1" type="checkbox" label="Link to Menu?" description="" value="1" default="0" />
+				<field name="menuitem1" type="menuitem" default="45" label="Select a menu item" description="Select a menu item" />
+			</fieldset>
+			<fieldset name="MOD_SLIDER_SLIDE_2">
+				<field name="use_slide2" type="checkbox" label="Use this slide?" description="" value="1" default="0" />
+				<field name="title2" filter="raw" type="text" default="Title" label="Enter the title" description="" size="10" />
+				<field name="introcopy2" label ="Introduction" type="editor" width="150" filter="safehtml" />
+				<field name="image2" type="media" directory="stories" label="Image" description="Please select the image to show in the box" />	
+				<field name="link_menu2" type="checkbox" label="Link to Menu?" description="" value="1" default="0" />
+				<field name="menuitem2" type="menuitem" default="45" label="Select a menu item" description="Select a menu item" />
+			</fieldset>
+			<fieldset name="MOD_SLIDER_SLIDE_3">
+				<field name="use_slide3" type="checkbox" label="Use this slide?" description="" value="1" default="0" />
+				<field name="title3" filter="raw" type="text" default="Title" label="Enter the title" description="" size="10" />
+				<field name="introcopy3" label ="Introduction" type="editor" width="150" filter="safehtml" />
+				<field name="image3" type="media" directory="stories" label="Image" description="Please select the image to show in the box" />	
+				<field name="link_menu3" type="checkbox" label="Link to Menu?" description="" value="1" default="0" />
+				<field name="menuitem3" type="menuitem" default="45" label="Select a menu item" description="Select a menu item" />
+			</fieldset>
+			<fieldset name="MOD_SLIDER_SLIDE_4">
+				<field name="use_slide4" type="checkbox" label="Use this slide?" description="" value="1" default="0" />
+				<field name="title4" filter="raw" type="text" default="Title" label="Enter the title" description="" size="10" />
+				<field name="introcopy4" label ="Introduction" type="editor" width="150" filter="safehtml" />
+				<field name="image4" type="media" directory="stories" label="Image" description="Please select the image to show in the box" />	
+				<field name="link_menu4" type="checkbox" label="Link to Menu?" description="" value="1" default="0" />
+				<field name="menuitem4" type="menuitem" default="45" label="Select a menu item" description="Select a menu item" />
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+				/>
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+				>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+				/>
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static"
+				>
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
